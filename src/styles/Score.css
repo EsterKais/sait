@@ -1,0 +1,7 @@
+.score-container p {
+  padding: 0;
+  margin: 0;
+
+ font-size: 15rem;
+ text-align: center;
+}
