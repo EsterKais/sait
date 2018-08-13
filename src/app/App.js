@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
 
-import Game from './Game';
+import Game from './Components/Game/Game';
 
-import '../styles/App.css';
+import './App.css';
 
-export default class App extends Component {
-  state = {
-    score: 10,
-    previousScores: [
-      { score: 20, textSize: 5 },
-      { score: 15, textSize: 10 }
-    ]
-  };
-
+class App extends Component {
   render() {
     return (
       <div className="app-container">
-        <Game state={ this.state } />
+        <Game />
       </div>
     );
   }
 }
+
+export default App;
