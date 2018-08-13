@@ -1,4 +1,23 @@
-.score-container p {
-  padding: 0;
-  margin: 0;
+.score-container {
+  display: flex;
+  margin: 25px;
+}
+
+.score-current {
+  font-size: 65px;
+
+  padding: 25px;
+  border-right: 1px solid #fff;
+  margin: 0px 25px;
+}
+
+.score-history {
+  list-style: none;
+}
+
+.score-history li {
+  text-decoration: line-through;
+}
+.score-history li:last-child {
+  text-decoration: none;
 }
