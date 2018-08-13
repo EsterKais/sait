@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Score from './Score';
+import Score from '../Score/Score';
 
-import '../../styles/Game.css';
+import './Game.css';
 
 class Game extends Component {
   state = {
