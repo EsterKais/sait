@@ -5,24 +5,21 @@ import './Score.css';
 // Stateless functional component
 const Score = (props) => {
   const { score } = props;
-  
   const scoreCurrent = score[score.length-1].life;
 
   const scoreHistory = score.map(
     (i) => <li key={ i.life }>{ i.life }  {i.note}</li>
   );
-  
+
   return (
     <div className="score-container">
-      
       <div className="score-current">
-        { scoreCurrent }
+        <span>{ scoreCurrent }</span>
       </div>
 
       <div className="score-history">
-        { scoreHistory }
+        <ul>{ scoreHistory }</ul>
       </div>
-
     </div>
   );
 }
