@@ -26,7 +26,11 @@ class Game extends Component {
     return (
       <div className="game-container">
         <Score score={ score.opponent } />
-        <hr />
+        <div><span>OPPONENT</span></div>
+
+        <hr className="game-separator" />
+
+        <div><span>PLAYER</span></div>
         <Score score={ score.own } />
       </div>
     );

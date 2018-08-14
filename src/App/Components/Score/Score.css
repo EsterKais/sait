@@ -15,9 +15,19 @@
   list-style: none;
 }
 
+.score-history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .score-history li {
   text-decoration: line-through;
 }
 .score-history li:last-child {
   text-decoration: none;
+}
+
+.score-title {
+  width: 25%;
 }
