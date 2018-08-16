@@ -28,10 +28,12 @@ class Game extends Component {
     return (
       <Score
         score={ this.state[player] }
-        player={ player }
-        edit={() => this.updateScore()}
       />
     );
+  }
+
+  addScore(player, life, note) {
+
   }
 
   render() {

@@ -4,7 +4,7 @@ import './Score.css';
 
 // Stateless functional component
 const Score = (props) => {
-  const { score, edit } = props;
+  const { score } = props;
   
   const scoreCurrent = score[score.length-1].life;
   const scoreHistory = score.map(
