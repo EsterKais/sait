@@ -5,33 +5,46 @@ import Score from '../Score/Score';
 import './Game.css';
 
 class Game extends Component {
-  state = {
-    opponent: [
-      { life: 20, note: '' },
-      { life: 17, note: 'FS' },
-      { life: 15, note: 'GG' },
-      { life: 12, note: 'LS' },
-      { life: 10, note: 'GG' }
-    ],
-    own: [
-      { life: 20, note: '' },
-      { life: 18, note: 'Sh' },
-      { life: 15, note: 'SB' }
-    ]
-  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      opponent: [
+        { life: 20, note: '' },
+        { life: 17, note: 'FS' },
+        { life: 15, note: 'GG' },
+        { life: 12, note: 'LS' },
+        { life: 10, note: 'GG' }
+      ],
+      own: [
+        { life: 20, note: '' },
+        { life: 18, note: 'Sh' },
+        { life: 15, note: 'SB' }
+      ]
+    };
+  }
+
+  renderScores(player) {
+    return (
+      <Score
+        score={ this.state[player] }
+        player={ player }
+        edit={() => this.updateScore()}
+      />
+    );
+  }
 
   render() {
     const score = this.state;
 
     return (
       <div className="game-container">
-        <Score score={ score.opponent } />
-        <div><span>OPPONENT</span></div>
+        
+        { this.renderScores('opponent') }
 
         <hr className="game-separator" />
 
-        <div><span>PLAYER</span></div>
-        <Score score={ score.own } />
+        { this.renderScores('own') }
       </div>
     );
   }
