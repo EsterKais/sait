@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Score from '../Score/Score';
+import InputModal from '../InputModal/InputModal';
 
 import './Game.css';
 
@@ -26,9 +27,10 @@ class Game extends Component {
 
   renderScores(player) {
     return (
-      <Score
-        score={ this.state[player] }
-      />
+      <div className="score-container">
+        <InputModal />
+        <Score score={ this.state[player] } />
+      </div>
     );
   }
 
