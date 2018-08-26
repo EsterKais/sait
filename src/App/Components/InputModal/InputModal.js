@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-responsive-modal';
+import './InputModal.css';
 
 class InputModal extends React.Component
 {
@@ -19,7 +20,13 @@ class InputModal extends React.Component
         return (
             <div className="input-modal-container">
                 <button onClick={ this.onOpenModal }>Open Modal</button>
-                <Modal open={open} onClose={this.onCloseModal} center>
+                
+                <Modal
+                    center
+                    open={open} 
+                    onClose={this.onCloseModal}
+                    classNames={{ modal:'input-modal' }}    
+                >
                     <h2>This Modal</h2>
                 </Modal>
             </div>
